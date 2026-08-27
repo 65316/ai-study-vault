@@ -11,7 +11,7 @@
 请读取 https://github.com/65316/ai-study-vault 这个仓库，按里面的安装剧本帮我部署这套学习系统
 ```
 
-> 有终端权限的 AI（Claude Code / Codex）会自动 clone → 检测环境 → 装依赖 → 配置 → 验证；网页版 AI 会引导你逐步操作。全程只有三类事必须你亲手做：**注册大模型平台账号、创建并填入 API Key、在 Obsidian 里点几下装插件**——其余全自动。
+> 有终端权限的 AI（Claude Code / Codex）会自动 clone → 检测环境 → 装依赖 → 下载插件 → 配置 → 验证；网页版 AI 会引导你逐步操作。全程只有三类事必须你亲手做：**注册大模型平台账号、创建并填入 API Key、在 Obsidian 里关闭一次限制模式**——其余（包括 CC Switch 和三个 Obsidian 插件的下载安装）AI 代劳。
 
 ---
 
