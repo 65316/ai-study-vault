@@ -1,6 +1,6 @@
 {
-  "_说明": "看图助手配置：只需填 api_key 即可用。base_url 需为 OpenAI 兼容端点（以 /v1 结尾）；model 需为对应平台的视觉模型。候选组合见 docs/01_环境安装.md 的「看图助手」一节。",
-  "base_url": "https://open.bigmodel.cn/api/paas/v4",
+  "_说明": "看图助手配置：只需填 api_key 即可用。默认推荐阿里云百炼（新用户有免费额度，开通即送，见 bailian.console.aliyun.com）。也可换智谱/中转站，候选组合见 docs/01_环境安装.md 的「看图助手」一节。",
+  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
   "api_key": "YOUR_API_KEY",
-  "model": "glm-4.6v"
+  "model": "qwen-vl-max"
 }
