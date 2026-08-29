@@ -23,27 +23,34 @@ git clone 或 ZIP      AI 帮你装三插件          CC Switch 填 Key        �
 
 ## 🔧 系统结构（它怎么工作）
 
-一句话：**Obsidian 是界面，Claude Code 是引擎，大模型 API 是大脑，网页版 AI 是免费复读机。**
+> **定位**：大学生个人自学系统——把常用的 Obsidian 变成随身 AI 家教，还能尽量不花 API 钱。
+
+**为什么这么搭（三步动机）**：
+1. Obsidian 本来就是好用的笔记软件 → 接入 AI，变成「私人家教」
+2. 国外 Claude Code / Codex 官方付费、用不起 → 用 CC Switch 把 Claude Code 这个「外壳」接到**国产 API 和你自己的中转站**（DeepSeek / Kimi / GLM / 千问 都能切）当大脑
+3. API 按量也花钱 → 再挂一条**免费轨道**：Surfing 内置浏览器直接开网页版免费 AI 复读，减少 API 消耗、防单一平台被卡；DeepSeek 没有视觉 → 用阿里云百炼免费额度做看图助手
+
+**界面长这样**（Obsidian 三栏）：
 
 ```
-你
-├─ 在 Obsidian 的 Claudian 面板里说话
-│     ↓
-├─ Claude Code（引擎）读你的画像 → 四步教学 → 写笔记
-│     ↓
-├─ 大模型 API（大脑）真正思考，CC Switch 切换平台
-│
-└─ Surfing 浏览器 → 网页版免费 AI 复读 ＋ vision.py 看图转文字
+┌──────────┬──────────────┬──────────────┐
+│   目录     │    内容笔记    │   AI 助手     │
+│ 01_学习计划 │  三段式笔记   │  Claudian 面板│
+│ 02_学科笔记 │  题目→答案→   │  ＋ Surfing   │
+│ 90_图片    │    总结      │  内置网页      │
+└──────────┴──────────────┴──────────────┘
 ```
 
 **四个角色**：
 
 | 角色 | 是谁 | 干什么 |
 |:--|:--|:--|
-| 界面 | Obsidian + 三个插件 | 笔记软件；Claudian=聊天入口，Surfing=内置浏览器，Image Toolkit=看图放大 |
-| 引擎 | Claude Code / Codex CLI | 你的 AI 家教：读学习记录、按四步循环上课、把成果写成三段式笔记 |
-| 大脑 | 大模型 API | 真正「思考」的模型；DeepSeek / Kimi / GLM / 千问 用 CC Switch 一键切换 |
-| 省钱轨道 | 网页版免费 AI + 看图助手 | 智能体教完去免费网页版复读加深；题目截图用 vision.py 转成文字再问 |
+| 界面 | Obsidian + Claudian / Surfing / Image Toolkit | 左目录、中笔记、右助手；Surfing 让你不切平台就用网页版免费 AI |
+| 引擎 | Claude Code / Codex CLI | 只是「外壳」AI 家教：读画像、四步教学、写三段式笔记 |
+| 大脑 | 大模型 API | 真正思考的国产模型 / 你的中转站；CC Switch 一键切换 |
+| 省钱轨道 | 网页版免费 AI + 看图助手 | 教完去 dp / kimi / 千问免费复读；截图走百炼 vision.py 转文字 |
+
+**供应商策略**：CC Switch 里预设三个平台，你可以自己加；安装时 AI 辅助给你配好，Key 只由你自己填。
 
 **两条工作流**：
 
