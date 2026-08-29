@@ -1,4 +1,4 @@
-# 🎓 AI 自学舱（AI Study Vault）
+# 🎓 大学生 AI 家教（AI-Tutor）
 
 > **Obsidian × AI 智能体 × 网页版免费对话**的交互学习系统。
 > 一句「帮我学XX」开课，学完去免费网页版重复刷，token 省一半，理解深一层。
@@ -69,7 +69,7 @@ git clone 或 ZIP      AI 帮你装三插件          CC Switch 填 Key        �
 把下面这段话**原样发给任意 AI**（Claude Code / Codex / Claudian / DeepSeek / Kimi / 千问网页版都行）：
 
 ```text
-请读取 https://github.com/65316/ai-study-vault 这个仓库，按里面的安装剧本帮我部署这套学习系统
+请读取 https://github.com/65316/AI-Tutor 这个仓库，按里面的安装剧本帮我部署这套学习系统
 ```
 
 AI 会自动完成：clone 仓库 → 检测环境 → 装 Node/Python/Claude Code → 下载 CC Switch 和三个 Obsidian 插件 → 配置看图助手 → 验证开课。
@@ -80,7 +80,7 @@ AI 会自动完成：clone 仓库 → 检测环境 → 装 Node/Python/Claude Co
 
 ## 🛠 方式二：手动安装（约 15 分钟）
 
-0. **获取模板**：`git clone https://github.com/65316/ai-study-vault.git 我的笔记本`，或浏览器打开仓库 Code → **Download ZIP** → 解压
+0. **获取模板**：`git clone https://github.com/65316/AI-Tutor.git 我的笔记本`，或浏览器打开仓库 Code → **Download ZIP** → 解压
 1. **装 Obsidian**（https://obsidian.md ）→ 「打开本地仓库文件夹」选择第 0 步的目录 → **设置 → 第三方插件 → 关掉「限制模式」**（不关装不了插件）
 2. **装 Node.js 18+**（https://nodejs.org ）→ `npm install -g @anthropic-ai/claude-code`
 3. **装 CC Switch** 配置大模型平台（Windows 一条命令：`winget install -e --id farion1231.CC-Switch`）→ 填入平台端点和你的 Key
