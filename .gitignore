@@ -4,6 +4,9 @@
 .obsidian/plugins/*/data.json
 .trash/
 
+# 看图助手真实 Key（模板见 tools/vision_config.example.json，真实 key 不入库防泄露）
+tools/vision_config.json
+
 # 临时文件
 *.tmp
 *.md.tmp

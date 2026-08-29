@@ -1,0 +1,6 @@
+{
+  "_说明": "看图助手配置模板。用法：①把本文件复制一份、改名为 vision_config.json ②打开 vision_config.json，把 api_key 换成你自己的密钥（默认 base_url/model 就是阿里云百炼 qwen-vl-max，不用改）。⚠️ vision_config.json 已在 .gitignore 内，填真实 key 后也不会被误推公开仓库。候选平台组合见 docs/01_环境安装.md 的「看图助手」一节。",
+  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "api_key": "YOUR_API_KEY",
+  "model": "qwen-vl-max"
+}

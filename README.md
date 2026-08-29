@@ -3,6 +3,16 @@
 > **Obsidian × AI 智能体 × 网页版免费对话**的交互学习系统。
 > 一句「帮我学XX」开课，学完去免费网页版重复刷，token 省一半，理解深一层。
 
+## 🗺 从零到能用（4 步，约 20 分钟）
+
+```
+① 拿模板 → ② 装 Obsidian + 插件 → ③ 配 Key + 看图 → ④ 初始化开课
+git clone 或 ZIP      AI 帮你装三插件          CC Switch 填 Key        对 AI 说「初始化」
+                       顺手关「限制模式」       复制 example 填 key     再「帮我学XX」
+```
+
+> 任何一步卡住 → [docs/04_新手卡壳速查.md](docs/04_新手卡壳速查.md)（装不上/连不上/找不到 + 国内加速）。
+
 ## 这是什么？
 
 | 能力 | 说明 |
@@ -29,10 +39,11 @@ AI 会自动完成：clone 仓库 → 检测环境 → 装 Node/Python/Claude Co
 
 ## 🛠 方式二：手动安装（约 15 分钟）
 
-1. **装 Obsidian**（https://obsidian.md ）→ 「打开本地仓库文件夹」选择克隆好的目录
+0. **获取模板**：`git clone https://github.com/65316/ai-study-vault.git 我的笔记本`，或浏览器打开仓库 Code → **Download ZIP** → 解压
+1. **装 Obsidian**（https://obsidian.md ）→ 「打开本地仓库文件夹」选择第 0 步的目录 → **设置 → 第三方插件 → 关掉「限制模式」**（不关装不了插件）
 2. **装 Node.js 18+**（https://nodejs.org ）→ `npm install -g @anthropic-ai/claude-code`
 3. **装 CC Switch** 配置大模型平台（Windows 一条命令：`winget install -e --id farion1231.CC-Switch`）→ 填入平台端点和你的 Key
-4. **Obsidian 社区插件装三个**：`Claudian`（对话 AI）、`Image Toolkit`（点击图片放大）、`Surfing`（内置浏览器）
+4. **Obsidian 插件装三个**：`Claudian`（对话 AI）、`Image Toolkit`（点击图片放大）、`Surfing`（内置浏览器）——最省事是终端对 AI 说「帮我装 Obsidian 的三个插件」代装
 5. 终端运行 `claude` → 说「**初始化**」
 
 > 图文详解：[docs/01_环境安装.md](docs/01_环境安装.md)
@@ -41,6 +52,11 @@ AI 会自动完成：clone 仓库 → 检测环境 → 装 Node/Python/Claude Co
 
 注册平台 Key → 对接智能体 → 对接看图助手 → 完善学员画像 → 定制学习规则
 每项的「为什么 + 步骤」：[docs/03_配置任务清单.md](docs/03_配置任务清单.md)（也可以对 AI 说「初始化」，让它带你做）
+
+> 💡 **「初始化 3 任务」vs「配置 5 任务」的对应**：对 AI 说「初始化」后它带你做 **3 个任务**（①完善画像 ②定制规则 ③搭建看图助手）；再算上之前**注册平台 + 填 Key**（任务 1、2），正好是配置清单的 **5 个任务**：
+> `5 任务 = 2 个"账号与钥匙"（注册 + 对接） + 3 个"初始化任务"（画像 + 规则 + 看图）`
+
+> 🆘 **卡住了？** 装不上 / 连不上 / 找不到，先看 [docs/04_新手卡壳速查.md](docs/04_新手卡壳速查.md)（含国内网络加速）。
 
 ---
 
@@ -74,6 +90,7 @@ AI 会自动完成：clone 仓库 → 检测环境 → 装 Node/Python/Claude Co
 | `docs/00_AI安装助手.md` | ⭐ 给 AI 读的安装剧本（AI 一键安装的依据） |
 | `docs/01_环境安装.md` | 手动安装图文教程 |
 | `docs/03_配置任务清单.md` | ⭐ 安装后必做 5 任务（原因+步骤） |
+| `docs/04_新手卡壳速查.md` | 🆘 装不上/连不上/找不到 全收录 + 国内网络加速 |
 | `docs/02_双轨学习法.md` | 方法论：智能体×网页版分工、省 token 策略 |
 | `AI助手配置/` | 默认教学规则细则（`我的规则.md` 由初始化生成） |
 | `01_学习计划/` | 学习记录：学员画像、目标、进度、倒计时 |
@@ -81,7 +98,7 @@ AI 会自动完成：clone 仓库 → 检测环境 → 装 Node/Python/Claude Co
 | `04_会话日志/` | 学习会话日志 |
 | `90_图片/` | 图片库（附件自动归位） |
 | `99_草稿区/` | 收集箱：想学的课 / 题目截图 / 资料先丢这，AI 整理归档（课程→学习计划，图题→转文字免费问） |
-| `tools/` | `vision.py` 看图助手（只填一个 api_key） |
+| `tools/` | `vision.py` 看图助手（复制 example 为 vision_config.json，只填 api_key） |
 
 ## 🔒 隐私声明
 

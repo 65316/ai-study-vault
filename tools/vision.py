@@ -8,7 +8,7 @@
     python tools/vision.py <图片路径> [提示词]
 示例：
     python tools/vision.py "90_图片/题目1.png" "把图里的题目完整转成文字，保留公式"
-配置：同目录 vision_config.json（只需填 api_key）
+配置：把同目录 vision_config.example.json 复制一份改名为 vision_config.json，再填 api_key
 依赖：无第三方库（纯标准库）
 """
 import base64
@@ -27,6 +27,11 @@ CONFIG_PATH = pathlib.Path(__file__).with_name("vision_config.json")
 
 
 def load_config():
+    if not CONFIG_PATH.exists():
+        sys.exit(
+            "❌ 找不到 tools/vision_config.json：请把 tools/vision_config.example.json "
+            "复制一份改名为 vision_config.json，再编辑它把 api_key 换成你自己的密钥。"
+        )
     cfg = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     if cfg.get("api_key", "").startswith("YOUR_"):
         sys.exit("❌ 还没填 API key：请编辑 tools/vision_config.json，把 api_key 换成你自己的密钥。")
